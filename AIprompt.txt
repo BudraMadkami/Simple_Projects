@@ -1,0 +1,65 @@
+1. Explain to me with ASCII art like below :
+Suppose I wanna understand the Google app "Classroom", then it should be 
+	 		Classroom(App interface)
+				|
+	
+	------------------------------------------------------------------------------------------------											|			|			|
+	|			|			|															
+Google Classroom					Feedback(:) (it is google feedback) 
+|		Account[Linked	Email/can add new]	[Here you will give your feedback to google i.e: post comments good, Bad, need improvement and hard to use, etc.]
+|							
+|-Classes						
+|							
+|-Calendar(Schedule->Day->Days->Week->Month->Under Email Account->My calendar(to do box)->Tasks(to do box))							
+|							
+|-Notifications	(here also same as above, whatever subsections are there	..)					
+|							
+|-Enrolled (inside to-do list) (apply as above if exists)							
+|							
+|-Offline files	 (apply as above if they exist)						
+|							
+|-Archived classes (apply as above if they exist)							
+|							
+|-Classroom folders (apply as above if they exist)							
+|						
+|-settings (apply as above if exists)							
+|							
+|-Help (apply as above if exists)
+
+2. Explain to me with ASCII art like below :
+Suppose I wanna understand the Meta app" Instagram", then it should be
+Instagram (App Interface)
+        |
+        -------------------------------------------------------------------------------------------------
+        |                                                                                               |
+   Core Features                                                                                   Account & Settings
+        |                                                                                               |
+   - Feed (Home)                                                                                 - Profile (Bio, Posts, Highlights)
+   - Stories                                                                                      - Followers / Following
+   - Reels                                                                                        - Saved Posts
+   - Explore (Search & Discover)                                                                  - Settings
+   - Direct Messages (DMs)                                                                        - Privacy & Security
+   - Notifications                                                                                - Activity (Likes, Comments)
+   - Shop                                                                                         - Help / Support
+   - Live                                                                                         - Logout
+        |
+   -------------------------------------------------------------------------------------------------
+   |            |            |            |            |            |            |            |
+Feed        Stories       Reels       Explore       DMs        Notifications     Shop
+|           |             |           |             |           |                |
+|           |             |           |             |           |                |
+Posts       Short videos  Short-form  Search bar    Chats       Likes, comments  Products
+(photos,    (24 hrs)      creative    Suggested     Groups      Follows, tags    Brands
+videos,     Stickers,     content     accounts      Calls       Updates          Checkout
+captions)   Polls, GIFs   Editing     Trending      Requests    Reminders        Orders
+            Highlights    Music       Hashtags      Media share
+            Archive       Effects     Explore grid
+
+
+							
+							
+							
+							
+
+							
+ 
