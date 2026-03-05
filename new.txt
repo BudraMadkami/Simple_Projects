@@ -1,7 +1,5 @@
-Hi i'm new .
-ouch
-hey 
-how are you .
-
-I'm so happy sir
-How about you ?
+#include <iostream>
+using namespace std;
+int main () {
+cout <<"Hello World"<<endkl;
+}
