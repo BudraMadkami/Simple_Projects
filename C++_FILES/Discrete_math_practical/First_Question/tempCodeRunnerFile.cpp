@@ -1,0 +1,2 @@
+
+    return A(newnum, newden);

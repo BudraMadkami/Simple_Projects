@@ -1,0 +1,66 @@
+Is it possible to execute two different language combined in one system?
+def add(a ,b):
+  return (a+b)
+#include <iostream>
+using namespace std;
+int main(){
+ int num1,num2;
+ cout <<"Enter num1 and num2:"<<endl;
+ cin >>num1;
+ cin >>num2;
+ int result = add(num1,num2);
+ cout <<"The result is:"<<result<<endl;
+ return 0;
+}
+
+
+#include <Python.h>
+#include <iostream>
+using namespace std;
+
+int main() {
+    Py_Initialize();
+
+    // Import Python module
+    PyObject* pModule = PyImport_ImportModule("mymath");
+    // Get function
+    PyObject* pFunc = PyObject_GetAttrString(pModule, "add");
+
+    // Call function with arguments (3, 4)
+    PyObject* pArgs = PyTuple_Pack(2, PyLong_FromLong(3), PyLong_FromLong(4));
+    PyObject* pValue = PyObject_CallObject(pFunc, pArgs);
+
+    cout << "Result: " << PyLong_AsLong(pValue) << endl;
+
+    Py_Finalize();
+    return 0;
+}
+
+
+
+Mandatory pieces
+- Py_Initialize();
+Starts the Python interpreter inside your C++ program. Without this, you can’t run any Python code.
+- PyImport_ImportModule("mymath");
+Loads your Python file (mymath.py) as a module so C++ can access its functions.
+- PyObject_GetAttrString(pModule, "add");
+Retrieves the function object (add) from the module. Otherwise, C++ wouldn’t know what to call.
+- PyTuple_Pack(...)
+Creates the argument list (like (3,4)) in Python form. Python functions expect arguments as Python objects, not raw C++ ints.
+- PyObject_CallObject(pFunc, pArgs);
+Actually calls the Python function with the arguments you packed.
+- Py_Finalize();
+Shuts down the Python interpreter cleanly when you’re done.
+
+In short
+Yes — these are the core mandatory steps:
+- Initialize Python (Py_Initialize)
+- Import your module (PyImport_ImportModule)
+- Get the function (PyObject_GetAttrString)
+- Build arguments (PyTuple_Pack)
+- Call the function (PyObject_CallObject)
+- Finalize Python (Py_Finalize)
+Everything else (like error checking, Py_DECREF cleanup) is good practice but not strictly mandatory for a minimal working example.
+
+
+
