@@ -1,3 +1,4 @@
+//Second Question
 #include <iostream>
 using namespace std;
 
@@ -7,14 +8,18 @@ private:
     vector<vector<int>> mat; // adjacency matrix: mat[i][j] == 1 if (i, j) in R
 
 public:
-    RELATION(int size = 0) { setSize(size); }
+    RELATION(int size = 0) {
+         setSize(size);
+         }
 
     void setSize(int size) {
         n = max(0, size);
         mat.assign(n, vector<int>(n, 0));
     }
 
-    int size() const { return n; }
+    int size() const { 
+        return n; 
+    }
 
     // Input relation as adjacency matrix
     void inputMatrix() {

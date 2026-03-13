@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Custom Login Design</title>
+
+<style>
+
+/* Page base */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+    background:hsl(170, 82%, 18%);
+}
+
+/* Main container */
+.container{
+    width:600px;
+    height:400px;
+    position:relative;
+    overflow:hidden;
+    border:2px solid rgb(0, 4, 110);
+}
+
+/* Top solid color triangle */
+.top-solid{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:150px;
+    background:#3a3a3a;
+    clip-path: polygon(0 0,100% 0,0 100%);
+}
+
+/* Top gradient triangle */
+.top-gradient{
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:150px;
+    background:linear-gradient(45deg,#4facfe,#00f2fe);
+    clip-path: polygon(100% 0,100% 100%,0 0);
+}
+
+/* Bottom gradient shape */
+.bottom-gradient{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:200px;
+    background:linear-gradient(45deg,#ff7e5f,#feb47b);
+    clip-path: polygon(0 40%,100% 0,100% 100%,0 100%);
+}
+
+/* Login box */
+.login-box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    padding:30px;
+    width:250px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Input fields */
+input{
+    width:100%;
+    padding:8px;
+    margin:10px 0;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:10px;
+    background:#4facfe;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- top shapes -->
+    <div class="top-solid"></div>
+    <div class="top-gradient"></div>
+
+    <!-- bottom shape -->
+    <div class="bottom-gradient"></div>
+
+    <!-- login box -->
+    <div class="login-box">
+
+        <label>Username</label>
+        <input type="text">
+
+        <label>Password</label>
+        <input type="password">
+
+        <button onclick="login()">Login</button>
+
+    </div>
+
+</div>
+
+<script>
+
+function login(){
+    alert("Login clicked");
+}
+
+</script>
+
+</body>
+</html>

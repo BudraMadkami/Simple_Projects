@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Discord Style Login</title>
+
+<style>
+
+/* ===== PAGE BACKGROUND ===== */
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Gradient background like Discord */
+    background: linear-gradient(120deg,#2b2d8f,#1e90ff);
+
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===== MAIN LOGIN CARD ===== */
+.login-container{
+
+    width:720px;
+    background:#2f3136;
+    border-radius:10px;
+
+    display:flex;
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ===== LEFT SIDE (LOGIN FORM) ===== */
+.login-left{
+    width:60%;
+    color:white;
+}
+
+/* Welcome text */
+.login-left h2{
+    margin-bottom:5px;
+}
+
+.login-left p{
+    color:#b9bbbe;
+}
+
+/* Labels */
+label{
+    font-size:12px;
+    font-weight:bold;
+    display:block;
+    margin-top:20px;
+}
+
+/* Input fields */
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:5px;
+    border:none;
+    background:#202225;
+    color:white;
+}
+
+/* Forgot password link */
+.forgot{
+    display:block;
+    margin-top:5px;
+    color:#00a8fc;
+    font-size:12px;
+    text-decoration:none;
+}
+
+/* Login button */
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#5865f2;
+    border:none;
+    border-radius:5px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Register text */
+.register{
+    margin-top:15px;
+    font-size:12px;
+}
+
+.register a{
+    color:#00a8fc;
+    text-decoration:none;
+}
+
+/* ===== RIGHT SIDE (QR LOGIN) ===== */
+.login-right{
+    width:40%;
+    text-align:center;
+    color:white;
+    padding-left:20px;
+}
+
+/* QR Code image */
+.qr{
+    width:150px;
+    height:150px;
+    background:white;
+    margin:auto;
+    margin-bottom:20px;
+
+    /* Center fake QR text */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+/* QR description text */
+.login-right p{
+    color:#b9bbbe;
+    font-size:13px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ===== MAIN LOGIN CARD ===== -->
+<div class="login-container">
+
+    <!-- ===== LEFT SECTION : EMAIL LOGIN ===== -->
+    <div class="login-left">
+
+        <!-- Welcome message -->
+        <h2>Welcome back!</h2>
+        <p>We're so excited to see you again!</p>
+
+        <!-- Email input -->
+        <label>Email or Phone Number *</label>
+        <input id="email" type="text" placeholder="Enter email or phone">
+
+        <!-- Password input -->
+        <label>Password *</label>
+        <input id="password" type="password" placeholder="Enter password">
+
+        <!-- Forgot password -->
+        <a href="#" class="forgot">Forgot your password?</a>
+
+        <!-- Login button -->
+        <button onclick="login()">Log In</button>
+
+        <!-- Register link -->
+        <p class="register">
+            Need an account? <a href="#">Register</a>
+        </p>
+
+    </div>
+
+
+    <!-- ===== RIGHT SECTION : QR LOGIN ===== -->
+    <div class="login-right">
+
+        <!-- Fake QR code box -->
+        <div class="qr">
+            QR CODE
+        </div>
+
+        <h3>Log in with QR Code</h3>
+
+        <p>
+        Scan this with the Discord mobile app to log in instantly.
+        </p>
+
+        <p>
+        Or sign in with passkey
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* ===== SIMPLE LOGIN FUNCTION ===== */
+
+function login(){
+
+    // Get values from inputs
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    // Simple validation
+    if(email === "" || password === "")
+    {
+        alert("Please enter email and password");
+        return;
+    }
+
+    // Example login message
+    alert("Login attempted with: " + email);
+
+}
+
+</script>
+
+</body>
+</html>
